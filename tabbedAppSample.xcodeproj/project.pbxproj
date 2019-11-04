@@ -16,6 +16,7 @@
 		3F00D712237046C600D12F0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F00D710237046C600D12F0B /* LaunchScreen.storyboard */; };
 		3F00D71D237046C600D12F0B /* tabbedAppSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F00D71C237046C600D12F0B /* tabbedAppSampleTests.swift */; };
 		3F00D728237046C600D12F0B /* tabbedAppSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F00D727237046C600D12F0B /* tabbedAppSampleUITests.swift */; };
+		3F00D736237048FF00D12F0B /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F00D735237048FF00D12F0B /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3F00D723237046C600D12F0B /* tabbedAppSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tabbedAppSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F00D727237046C600D12F0B /* tabbedAppSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabbedAppSampleUITests.swift; sourceTree = "<group>"; };
 		3F00D729237046C600D12F0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F00D735237048FF00D12F0B /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				3F00D705237046C500D12F0B /* SceneDelegate.swift */,
 				3F00D707237046C500D12F0B /* FirstViewController.swift */,
 				3F00D709237046C500D12F0B /* SecondViewController.swift */,
+				3F00D735237048FF00D12F0B /* ThirdViewController.swift */,
 				3F00D70B237046C500D12F0B /* Main.storyboard */,
 				3F00D70E237046C600D12F0B /* Assets.xcassets */,
 				3F00D710237046C600D12F0B /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 			files = (
 				3F00D70A237046C500D12F0B /* SecondViewController.swift in Sources */,
 				3F00D708237046C500D12F0B /* FirstViewController.swift in Sources */,
+				3F00D736237048FF00D12F0B /* ThirdViewController.swift in Sources */,
 				3F00D704237046C500D12F0B /* AppDelegate.swift in Sources */,
 				3F00D706237046C500D12F0B /* SceneDelegate.swift in Sources */,
 			);
