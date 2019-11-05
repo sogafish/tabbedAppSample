@@ -45,25 +45,41 @@
         <!--Third-->
         <scene sceneID="Xbn-fF-pyl">
             <objects>
-                <viewController id="gAg-4O-6z6" sceneMemberID="viewController">
+                <viewController id="gAg-4O-6z6" customClass="ThirdViewController" customModule="tabbedAppSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i9G-mC-wX0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Third View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czG-Me-fHI">
-                                <rect key="frame" x="0.0" y="422" width="414" height="53"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THe-AI-vJ1">
+                                <rect key="frame" x="115" y="165" width="184" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="button:" destination="fzA-ff-OnX" eventType="touchUpInside" id="oBf-Oq-008"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWB-dY-pRJ">
+                                <rect key="frame" x="115" y="165" width="184" height="120"/>
+                                <state key="normal" title="Alert Button"/>
+                                <connections>
+                                    <action selector="button:" destination="fzA-ff-OnX" eventType="touchUpInside" id="GHs-Zn-uZK"/>
+                                    <action selector="showAlert:" destination="gAg-4O-6z6" eventType="touchUpInside" id="L4O-wS-ACh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KWB-dY-pRJ" firstAttribute="top" secondItem="acd-gE-mGh" secondAttribute="top" constant="121" id="DaZ-Td-b2D"/>
+                            <constraint firstItem="acd-gE-mGh" firstAttribute="trailing" secondItem="KWB-dY-pRJ" secondAttribute="trailing" constant="115" id="SRd-0S-huz"/>
+                            <constraint firstItem="acd-gE-mGh" firstAttribute="bottom" secondItem="KWB-dY-pRJ" secondAttribute="bottom" constant="528" id="nC3-FL-ZQy"/>
+                            <constraint firstItem="KWB-dY-pRJ" firstAttribute="leading" secondItem="acd-gE-mGh" secondAttribute="leading" constant="115" id="rF6-gC-DvU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="acd-gE-mGh"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Third" image="3.circle.fill" catalog="system" id="E2w-9p-hl9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="227-oc-bRY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fzA-ff-OnX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="747.82608695652175" y="977.67857142857133"/>
         </scene>

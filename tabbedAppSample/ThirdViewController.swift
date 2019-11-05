@@ -8,23 +8,68 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+class ThirdViewController: UIViewController, UITextFieldDelegate {
+    
+    func hello(_ msg: String) {
+        print(msg)
     }
     
+    @IBAction func showAlert(_ sender: Any) {
+        // make Alert
+        let alert = UIAlertController(title: "this is alert title", message: "here is message", preferredStyle: .alert)
 
-    /*
-    // MARK: - Navigation
+        // button1
+        alert.addAction(UIAlertAction(
+            title: "Button1",
+            style: .default,
+            handler: {(action) -> Void in
+                self.hello(action.title!)
+            }
+        ))
+        
+        // button2
+        alert.addAction(UIAlertAction(
+            title: "Button2",
+            style: .default,
+            handler: {(action) -> Void in
+                self.hello(action.title!)
+            }
+        ))
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // cancelButton
+        alert.addAction(UIAlertAction(
+            title: "Cancel",
+            style: .cancel,
+            handler: nil
+        ))
+        
+        // red destructive
+        alert.addAction(UIAlertAction(
+            title: "delete, are you sure?",
+            style: .destructive,
+            handler: {(action) -> Void in
+                self.hello(action.title!)
+            }
+        ))
+        
+// !! Not Working !!
+//        // show alert
+//        alert.present(
+//            alert,
+//            animated: true,
+//            completion: {
+//              print("oooooooo")
+//            }
+//        )
+
+        present(alert, animated: true, completion: nil)
     }
-    */
+    
+    
+    override func viewDidLoad() {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.isActive = false;
 
+        super.viewDidLoad()
+    }
 }
