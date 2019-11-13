@@ -83,6 +83,9 @@
                                 <rect key="frame" x="164" y="223" width="86" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ActionSHeet"/>
+                                <connections>
+                                    <action selector="ShowActionController:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="mfA-MJ-fpU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
