@@ -9,7 +9,37 @@
 import UIKit
 
 class ThirdViewController: UIViewController, UITextFieldDelegate {
+    var num = 0
     
+    @IBOutlet weak var countLabel: UILabel!
+    
+    @objc func timerStep() {
+        num += 1
+        countLabel.text = String(num)
+        
+        UIView.transition(
+            with: countLabel,
+            duration: 0.2,
+            options: [.transitionCrossDissolve],
+            animations: nil,
+            completion: nil
+        )
+    }
+    
+
+    @IBAction func startCountUp(_ sender: Any) {
+        Timer.scheduledTimer(
+            timeInterval: 1.0,
+            target: self,
+            selector: #selector(self.timerStep),
+            userInfo: nil,
+            repeats: true
+        )
+
+        countLabel.text = String(num)
+    }
+    
+
     func hello(_ msg: String) {
         print(msg)
     }
@@ -51,16 +81,6 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
                 self.hello(action.title!)
             }
         ))
-        
-// !! Not Working !!
-//        // show alert
-//        alert.present(
-//            alert,
-//            animated: true,
-//            completion: {
-//              print("oooooooo")
-//            }
-//        )
 
         present(alert, animated: true, completion: nil)
     }
@@ -69,6 +89,8 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.isActive = false;
+        
+        countLabel.text = String(num)
 
         super.viewDidLoad()
     }

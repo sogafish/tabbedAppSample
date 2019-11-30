@@ -54,6 +54,21 @@
                                     <action selector="showAlert:" destination="gAg-4O-6z6" eventType="touchUpInside" id="L4O-wS-ACh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIi-QA-Kdu">
+                                <rect key="frame" x="0.0" y="386" width="414" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FX5-QJ-Ips">
+                                <rect key="frame" x="169" y="313" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="CountUp"/>
+                                <connections>
+                                    <action selector="startCountUp:" destination="gAg-4O-6z6" eventType="touchUpInside" id="WJy-X9-pc3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -65,6 +80,9 @@
                         <viewLayoutGuide key="safeArea" id="acd-gE-mGh"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Third" image="3.circle.fill" catalog="system" id="E2w-9p-hl9"/>
+                    <connections>
+                        <outlet property="countLabel" destination="gIi-QA-Kdu" id="rRV-a7-ucF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="227-oc-bRY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="fzA-ff-OnX" userLabel="Exit" sceneMemberID="exit"/>
